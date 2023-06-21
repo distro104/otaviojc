@@ -21,6 +21,8 @@ html {
 body #container {
     max-width: 750px;
     border-radius: 20px;
+
+    height: 100vh;
 }
 
 header {
@@ -40,14 +42,6 @@ header li a {
 
     font-size: 2.0rem;
 }
-header li a:visited {
-    color: rgb(155, 83, 83); /* Define a cor padrão dos links visitados */
-}
-header li a:active {
-    color: #f00; /* Define a cor de destaque para o link ativo */
-    font-weight: bold; /* Define a formatação para o link ativo */
-}
-
 
 main > * {
     height: 100vh;
@@ -59,28 +53,41 @@ main > * {
     background-color:rgb(212, 209, 209);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 35vh 55vh;
-    grid-template-areas: "b c c"
-                         "b d d";
+    grid-template-rows: 25vh 65vh;
+    grid-template-areas: "a b b"
+                         "a c c";
 }
 #quemsoueu div {
     width: 100%;
 }
-#quemsoueu .titulo {
-    grid-area: a;
-    background-color: aqua;
-}
 #quemsoueu .imagem {
-    grid-area: b;
+    grid-area: a;
     background-color: blue;
+
+    display: flex;
+    align-items: center;
+}
+#quemsoueu .imagem img {
+    width: 80%;
+    height: 80%;
+    height: auto;
+    border: 1px solid black;
 }
 #quemsoueu .social {
-    grid-area: c;
+    grid-area: b;
     background-color: blueviolet;
+
+    display: flex;
+    align-items: center;
 }
 #quemsoueu .texto {
-    grid-area: d;
+    grid-area: c;
     background-color: aliceblue;
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.9rem;
+    text-indent: 20%;
+    line-height: 2rem;
 }
 
 #meutrabalho {
@@ -93,11 +100,4 @@ main > * {
 
 #creditos {
     background-color:rgb(255, 62, 62);
-}
-
-footer {
-    background-color: black;
-    color: bisque;
-    border-radius: 0 0 50% 50%;
-    height: 20px;
 }
